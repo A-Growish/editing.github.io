@@ -9,6 +9,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 <style>
 
 *{
@@ -16,6 +19,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Poppins;
+scroll-behavior:smooth;
 }
 
 body{
@@ -34,6 +38,7 @@ padding:20px 10%;
 background:#0f0f0f;
 position:sticky;
 top:0;
+z-index:100;
 }
 
 nav h2{
@@ -50,6 +55,7 @@ nav a{
 color:white;
 text-decoration:none;
 font-size:14px;
+transition:.3s;
 }
 
 nav a:hover{
@@ -90,10 +96,12 @@ color:black;
 font-weight:600;
 border-radius:8px;
 cursor:pointer;
+transition:.3s;
 }
 
 .hero button:hover{
 transform:scale(1.08);
+box-shadow:0 0 15px #00ffd5;
 }
 
 /* SECTIONS */
@@ -121,12 +129,12 @@ background:#121212;
 padding:30px;
 border-radius:12px;
 border:1px solid #222;
-transition:.3s;
+transition:.35s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 20px #00ffd5;
+transform:translateY(-12px) scale(1.02);
+box-shadow:0 0 25px #00ffd5;
 }
 
 /* PORTFOLIO */
@@ -141,6 +149,12 @@ gap:25px;
 border-radius:10px;
 overflow:hidden;
 border:1px solid #222;
+transition:.3s;
+}
+
+.video:hover{
+transform:scale(1.04);
+box-shadow:0 0 20px #00ffd5;
 }
 
 .video iframe{
@@ -162,6 +176,12 @@ background:#121212;
 padding:10px 20px;
 border-radius:20px;
 border:1px solid #333;
+transition:.3s;
+}
+
+.skill:hover{
+background:#00ffd5;
+color:black;
 }
 
 /* CONTACT */
@@ -195,6 +215,11 @@ font-weight:600;
 cursor:pointer;
 width:100%;
 border-radius:6px;
+transition:.3s;
+}
+
+.contact button:hover{
+box-shadow:0 0 15px #00ffd5;
 }
 
 /* FOOTER */
@@ -211,7 +236,7 @@ opacity:.7;
 
 <body>
 
-<nav>
+<nav data-aos="fade-down">
 
 <h2>AnishS</h2>
 
@@ -226,13 +251,13 @@ opacity:.7;
 
 <div class="hero">
 
-<h1>Professional Video Editor</h1>
+<h1 data-aos="zoom-in">Professional Video Editor</h1>
 
-<p>
+<p data-aos="fade-up">
 I create engaging short-form and long-form videos for YouTube, TikTok, and Instagram using modern trends, captions, and storytelling techniques.
 </p>
 
-<a href="https://www.fiverr.com/anishsinha288?public_mode=true">
+<a href="https://www.fiverr.com/s/Ayryg7P" data-aos="fade-up">
 <button>Hire Me on Fiverr</button>
 </a>
 
@@ -240,9 +265,9 @@ I create engaging short-form and long-form videos for YouTube, TikTok, and Insta
 
 <section id="about">
 
-<h2>About Me</h2>
+<h2 data-aos="fade-up">About Me</h2>
 
-<p style="max-width:700px;margin:auto;text-align:center;">
+<p data-aos="fade-up" style="max-width:700px;margin:auto;text-align:center;">
 I'm Anish, a video editor specializing in social media content. I help creators turn raw footage into engaging videos with captions, transitions, and high-retention editing styles.
 </p>
 
@@ -250,26 +275,26 @@ I'm Anish, a video editor specializing in social media content. I help creators 
 
 <section id="services">
 
-<h2>Services</h2>
+<h2 data-aos="fade-up">Services</h2>
 
 <div class="services">
 
-<div class="card">
+<div class="card" data-aos="zoom-in">
 <h3>Short Form Editing</h3>
 <p>TikTok, Reels, and YouTube Shorts with captions and fast pacing.</p>
 </div>
 
-<div class="card">
+<div class="card" data-aos="zoom-in">
 <h3>YouTube Video Editing</h3>
 <p>Professional long-form editing with storytelling and smooth cuts.</p>
 </div>
 
-<div class="card">
+<div class="card" data-aos="zoom-in">
 <h3>Custom Intros & Outros</h3>
 <p>Branded intros and outros to make your videos stand out.</p>
 </div>
 
-<div class="card">
+<div class="card" data-aos="zoom-in">
 <h3>Content Strategy</h3>
 <p>Guidance on niche selection and audience targeting.</p>
 </div>
@@ -280,16 +305,16 @@ I'm Anish, a video editor specializing in social media content. I help creators 
 
 <section>
 
-<h2>Skills</h2>
+<h2 data-aos="fade-up">Skills</h2>
 
 <div class="skills">
 
-<div class="skill">Video Editing</div>
-<div class="skill">Short Form Content</div>
-<div class="skill">YouTube Editing</div>
-<div class="skill">Captions</div>
-<div class="skill">Transitions</div>
-<div class="skill">Color Correction</div>
+<div class="skill" data-aos="fade-up">Video Editing</div>
+<div class="skill" data-aos="fade-up">Short Form Content</div>
+<div class="skill" data-aos="fade-up">YouTube Editing</div>
+<div class="skill" data-aos="fade-up">Captions</div>
+<div class="skill" data-aos="fade-up">Transitions</div>
+<div class="skill" data-aos="fade-up">Color Correction</div>
 
 </div>
 
@@ -297,19 +322,19 @@ I'm Anish, a video editor specializing in social media content. I help creators 
 
 <section id="portfolio">
 
-<h2>Portfolio</h2>
+<h2 data-aos="fade-up">Portfolio</h2>
 
 <div class="portfolio">
 
-<div class="video">
+<div class="video" data-aos="zoom-in">
 <iframe src="YOUR_VIDEO_LINK"></iframe>
 </div>
 
-<div class="video">
+<div class="video" data-aos="zoom-in">
 <iframe src="YOUR_VIDEO_LINK"></iframe>
 </div>
 
-<div class="video">
+<div class="video" data-aos="zoom-in">
 <iframe src="YOUR_VIDEO_LINK"></iframe>
 </div>
 
@@ -319,12 +344,11 @@ I'm Anish, a video editor specializing in social media content. I help creators 
 
 <section id="contact">
 
-<h2>Contact</h2>
+<h2 data-aos="fade-up">Contact</h2>
 
-<div style="text-align:center;font-size:18px;line-height:2;">
+<div style="text-align:center;font-size:18px;line-height:2;" data-aos="fade-up">
 
 <p>📧 Email: <a href="mailto:sinha.anish008@email.com" style="color:#00ffd5;">sinha.anish008@email.com</a></p>
-
 
 <p style="opacity:.8;">
 Feel free to contact me for collaborations, freelance projects, or video editing services.
@@ -339,6 +363,16 @@ Feel free to contact me for collaborations, freelance projects, or video editing
 <p>© 2026 AnishS | Video Editing Portfolio</p>
 
 </footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
+</script>
 
 </body>
 </html>
